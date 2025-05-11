@@ -1,0 +1,369 @@
+{
+  "last_node_id": 31,
+  "last_link_id": 24,
+  "nodes": [
+    {
+      "id": 24,
+      "type": "VHS_LoadImagePath",
+      "pos": [
+        1942.0980224609375,
+        1190.2152099609375
+      ],
+      "size": [
+        238.8000030517578,
+        126
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "VAE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "image",
+          "type": "STRING",
+          "widget": {
+            "name": "image"
+          },
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "031c4ae301c9b6403e2f472eb91f0ff87bbb5385",
+        "Node name for S&R": "VHS_LoadImagePath"
+      },
+      "widgets_values": {
+        "image": "",
+        "custom_width": 0,
+        "custom_height": 0,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "custom_width": 0,
+            "custom_height": 0
+          }
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "Seed",
+      "pos": [
+        955.98828125,
+        913.8455810546875
+      ],
+      "size": [
+        315,
+        142
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "SEED",
+          "links": null,
+          "slot_index": 0
+        },
+        {
+          "name": "number",
+          "type": "NUMBER",
+          "links": null
+        },
+        {
+          "name": "float",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "int",
+          "type": "INT",
+          "links": [
+            10
+          ],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "9ae952b1b435d2bd846bfe6516919b5a8b9201aa",
+        "Node name for S&R": "Seed"
+      },
+      "widgets_values": [
+        1,
+        "increment"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "ShowText",
+      "pos": [
+        2004.710693359375,
+        934.6414794921875
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "shape": 6,
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "fairy-root_ComfyUI-Show-Text",
+        "ver": "b5e6f55fc69516f2c20553b516e9ace8ff7d8987",
+        "Node name for S&R": "ShowText"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoadImageandPrompt",
+      "pos": [
+        1423,
+        869
+      ],
+      "size": [
+        315,
+        126
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "INT",
+          "widget": {
+            "name": "index"
+          },
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Image Name",
+          "type": "STRING",
+          "links": [
+            20
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "Prompt",
+          "type": "STRING",
+          "links": [
+            24
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageandPrompt"
+      },
+      "widgets_values": [
+        "",
+        "sample_prompt.csv",
+        0
+      ]
+    },
+    {
+      "id": 27,
+      "type": "Note",
+      "pos": [
+        2173.416259765625,
+        1072.609619140625
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "connect this to your Image Loader"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 28,
+      "type": "Note",
+      "pos": [
+        2013.5908203125,
+        831.5064086914062
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Connect the promt to your prompt"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 29,
+      "type": "Note",
+      "pos": [
+        1124.9896240234375,
+        1120.4208984375
+      ],
+      "size": [
+        270.45556640625,
+        88
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "set this to 0 at the start; depending on what your index in the csv file is"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 30,
+      "type": "Note",
+      "pos": [
+        1172.80029296875,
+        1289.8084716796875
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Batch queue the total number of indexes you have in your file. "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 31,
+      "type": "Note",
+      "pos": [
+        1636.5665283203125,
+        768.6689453125
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "don't forget to add the \"/\" in the end. "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      10,
+      11,
+      3,
+      10,
+      0,
+      "INT"
+    ],
+    [
+      20,
+      10,
+      0,
+      24,
+      1,
+      "STRING"
+    ],
+    [
+      24,
+      10,
+      1,
+      26,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.4641000000000006,
+      "offset": [
+        -433.7797964619909,
+        -552.153678027457
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
