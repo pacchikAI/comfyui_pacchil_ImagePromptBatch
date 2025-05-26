@@ -23,7 +23,7 @@ class LoadImageandPrompt:
 
     FUNCTION = "LoadImageandPrompt"
 
-    CATEGORY = "LoadImageandPrompt"
+    CATEGORY = "PacchiKAI"
 
     def LoadImageandPrompt(self, index, FolderLocation, PromptFileName):
         PromptFileName = FolderLocation + PromptFileName
