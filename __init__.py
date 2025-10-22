@@ -23,7 +23,7 @@ class LoadImageandPrompt:
 
     FUNCTION = "LoadImageandPrompt"
 
-    CATEGORY = "PacchiKAI"
+    CATEGORY = "PacchiK Nodes"
 
     def LoadImageandPrompt(self, index, FolderLocation, PromptFileName):
         PromptFileName = FolderLocation + PromptFileName
@@ -51,3 +51,4 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LoadImageandPrompt": "Load Image and Prompt",
     
 }
+
